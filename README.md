@@ -63,6 +63,8 @@ In order to provide robust backwards compatibility, fallback implementations of 
 
 See the [Build Guide](#build-guide) for instructions on compiling the SDK.
 
+If you are using the `MatouSakura` fork chain and want a clone/build guide that includes recursive submodules, local DXC, local Slang, and the validated CMake command, see the [Fork Build Guide](docs/ForkBuildGuide.md).
+
 To experiment with how Neural Texture Compression performs with different latent shapes and texture bundles, follow the [NTC Explorer Guide](docs/Explorer.md). A few sample material sets have been provided in this package under the `./assets/materials` folder.
 
 To see how NTC works on a sample 3D scene follow the instructions in the [NTC Renderer Guide](docs/Renderer.md) for pre-processing a GLTF scene. A sample scene has been provided under the `./assets/models` folder.
