@@ -2,6 +2,42 @@
 
 This document describes how to clone and build the SDK from the `MatouSakura` fork chain on Windows.
 
+## One-Click Setup
+
+After cloning the repository, the simplest option is to run:
+
+```powershell
+.\setup-fork-windows.cmd
+```
+
+Or, if you prefer PowerShell directly:
+
+```powershell
+.\setup-fork-windows.ps1
+```
+
+The script does the following:
+
+- syncs and initializes recursive submodules
+- detects CUDA from the local machine
+- uses local DXC and Slang paths when available
+- runs the validated CMake configure command for this fork
+
+If you also want it to build the project immediately:
+
+```powershell
+.\setup-fork-windows.ps1 -Build
+```
+
+Useful optional parameters:
+
+```powershell
+.\setup-fork-windows.ps1 `
+  -CudaToolkitRoot "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.9" `
+  -DxcPath "D:\Tools\DXC\dxc_2025_05_24\bin\x64\dxc.exe" `
+  -SlangPath "D:\Tools\Slang\slang-2025.19.1-windows-x86_64\bin\slangc.exe"
+```
+
 ## What Is Already Wired
 
 The `.gitmodules` files in this fork have already been changed to point at the following fork chain:
